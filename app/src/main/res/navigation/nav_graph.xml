@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/cameraFragment">
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.camera.CameraFragment"
+        tools:layout="fragment_camera">
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.dashboard.DashboardFragment"
+        tools:layout="fragment_dashboard">
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.history.HistoryFragment"
+        tools:layout="fragment_history">
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.settings.SettingsFragment"
+        tools:layout="fragment_settings">
+    </fragment>
+
+    <action
+        android:id="@+id/action_cameraFragment_to_dashboardFragment"
+        app:destination="@id/dashboardFragment" />
+    <action
+        android:id="@+id/action_dashboardFragment_to_historyFragment"
+        app:destination="@id/historyFragment" />
+    <action
+        android:id="@+id/action_historyFragment_to_settingsFragment"
+        app:destination="@id/settingsFragment" />
+
+</navigation>
